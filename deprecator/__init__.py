@@ -1,0 +1,1 @@
+from deprecator import *
