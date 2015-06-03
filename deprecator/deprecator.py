@@ -10,13 +10,13 @@ def deprecate(replacement=None):
     """Prints a deprecation warning when a function is called.
 
     Argument:
-      replacement (str): The func which replaces the deprecated func.
+      replacement (func): The func which replaces the deprecated func.
 
     Usage:
       >>> from deprecator import deprecate
+      >>> def bar(): print("hello")
       >>> @deprecate(replacement=bar)
-      >>> def foo():
-      >>>     print "hello"
+      >>> def foo(): print("hello")
       >>> foo()
       DeprecationWarning: foo is deprecated; use bar instead.
       hello
