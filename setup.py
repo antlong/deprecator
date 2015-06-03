@@ -2,10 +2,13 @@
 # -*- coding: utf-8 -*-
 from distutils.core import setup
 
+with open('README.rst') as file:
+    long_description = file.read()
 
 setup(
     name='deprecator',
     packages=['deprecator'],
+    long_description=long_description,
     version='0.3',
     description='Deprecator provides a decorator to easily depreate old code.',
     keywords="deprecation deprecate warning warn decorator",
@@ -45,6 +48,7 @@ setup(
         "Topic :: Software Development :: Localization",
         "Topic :: Software Development :: Quality Assurance",
         "Topic :: Software Development :: Testing",
+        "Topic :: Utilities",
         'Operating System :: MacOS :: MacOS X',
         'Operating System :: Microsoft :: Windows',
         'Operating System :: POSIX']
